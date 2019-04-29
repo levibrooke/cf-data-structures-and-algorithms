@@ -89,8 +89,6 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-
-  // let sizeWords = ['medium-sized', 'pounds', 'gallons', 'cups', 'pound'];
   let ingredients = recipe.ingredients;
 
   ingredients.forEach((el) => {
@@ -112,7 +110,19 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  let ingredients = recipe.ingredients;
+
+  ingredients.forEach((el) => {
+    let split = el.split(' ');
+    // console.log('split', split);
+
+    if (split.length > 2) {
+      split.splice(0, 2);
+      let joined = split.join(' ');
+      result.push(joined);
+    }
+  });
+
   return result;
 };
 
