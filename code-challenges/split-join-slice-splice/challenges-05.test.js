@@ -114,7 +114,6 @@ const splitFoods = (recipe) => {
 
   ingredients.forEach((el) => {
     let split = el.split(' ');
-    // console.log('split', split);
 
     if (split.length > 2) {
       split.splice(0, 2);
@@ -138,7 +137,15 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  let steps = recipe.steps;
+
+  steps.forEach((el) => {
+    let firstSpace = el.indexOf(' ');
+    let verb = el.slice(0, firstSpace);
+
+    result.push(verb);
+  });
+
   return result;
 };
 
