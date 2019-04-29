@@ -89,7 +89,20 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  let sizeWords = ['medium-sized', 'pounds', 'gallons', 'cups', 'pound'];
+  let ingredients = recipe.ingredients;
+
+  for (let i = 0; i < ingredients.length; i++) {
+    let find;
+
+    for (let j = 0; j < sizeWords.length; j++) {
+      find = ingredients[i].indexOf(j);
+      console.log('find', find);
+    }
+    console.log('find2', find);
+  }
+  
   return result;
 };
 
