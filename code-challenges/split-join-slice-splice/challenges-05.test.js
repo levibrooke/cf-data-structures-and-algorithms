@@ -90,19 +90,15 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
 
-  let sizeWords = ['medium-sized', 'pounds', 'gallons', 'cups', 'pound'];
+  // let sizeWords = ['medium-sized', 'pounds', 'gallons', 'cups', 'pound'];
   let ingredients = recipe.ingredients;
 
-  for (let i = 0; i < ingredients.length; i++) {
-    let find;
+  ingredients.forEach((el) => {
+    let find = el.indexOf(' ');
+    let second = el.indexOf(' ', find + 1);
+    result.push(el.slice(second + 1));
+  });
 
-    for (let j = 0; j < sizeWords.length; j++) {
-      find = ingredients[i].indexOf(j);
-      console.log('find', find);
-    }
-    console.log('find2', find);
-  }
-  
   return result;
 };
 
