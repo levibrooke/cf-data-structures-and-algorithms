@@ -9,9 +9,9 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  return arr.reduce((valueSoFar, currentValue, currentIndex) => {
-    return currentIndex + 1;
-  });
+  return arr.reduce((valueSoFar, currValue) => {
+    return valueSoFar + 1;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,8 +71,10 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  arr.reduce((valuesSoFar, currValue) => {
-  });
+  return arr.reduce((valuesSoFar, currValue) => {
+    valuesSoFar.push(currValue.name);
+    return valuesSoFar;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,8 +85,11 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  // Solution code here...
+const reversedString = (str) => {
+  return str.split('')
+    .reduce((ansSoFar, currValue) => {
+      return currValue + ansSoFar;
+    }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +142,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((ansSoFar, currValue) => {
+    if (currValue.hasOwnProperty('children')) {
+      return ansSoFar + currValue.children.length;
+    }
+    return ansSoFar;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,7 +159,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let result = arr.reduce((valSoFar, currVal) => {
+    valSoFar.count++;
+    valSoFar.sum = valSoFar.sum + currVal;
+    valSoFar.avg = valSoFar.sum / valSoFar.count;
+    return valSoFar;
+  }, { count: 0, sum: 0 });
+  return result.avg;
 };
 
 /* ------------------------------------------------------------------------------------------------
