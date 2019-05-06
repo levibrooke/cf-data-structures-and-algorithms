@@ -12,7 +12,11 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  return input.reduce((outerValSoFar, outerCurrVal) => {
+    return outerCurrVal.reduce((valSoFar, currVal) => { // take inner array
+      return currVal === target ? valSoFar + 1 : valSoFar; // if inner array el === target, increment count
+    }, outerValSoFar);
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
