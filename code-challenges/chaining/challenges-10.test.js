@@ -30,7 +30,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  return input.reduce((outerValSoFar, outerCurrVal) => {
+    return outerCurrVal.reduce((valSoFar, currVal) => {
+      return valSoFar + currVal;
+    }, outerValSoFar);
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +50,17 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.reduce((outerValSoFar, outerCurrVal) => {
+    let hold = outerCurrVal.reduce((innerValSoFar, innerCurrVal) => { // run reduce on inner arrays
+      if (typeof (innerCurrVal) === 'number' && innerCurrVal % 5 === 0) { // if a number & divisible by 5...
+        innerValSoFar.push(Math.pow(2, innerCurrVal)); // push 2^nth value into innerValSoFar array
+        return innerValSoFar;
+      }
+      return innerValSoFar;
+    }, []);
+    outerValSoFar.push(hold); // push result of inner reduce into outer accumulator
+    return outerValSoFar;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +140,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  return data.reduce((shortest, currCharacter) => {
+    // 
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
