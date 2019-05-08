@@ -81,7 +81,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let petStore = arr.filter(obj => obj.store === 'Pet store')[0].items.filter(item => item.name === 'Treats');
+
+  return petStore[0].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +105,8 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  let gameRow = board[row];
+  return gameRow[col] === '#' ? 'hit' : 'miss';
 };
 
 /* ------------------------------------------------------------------------------------------------
