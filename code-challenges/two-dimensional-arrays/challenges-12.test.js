@@ -118,7 +118,11 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  return numbers.reduce((outerAccum, outerVal) => {
+    return outerVal.reduce((innerAccum, innerVal) => {
+      return innerAccum * innerVal;
+    }, outerAccum);
+  }, 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,7 +142,12 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let result = weather.reduce((outerAccum, outerVal) => {
+    return outerVal.reduce((innerAccum, innerVal, idx, arr) => {
+      return innerAccum + innerVal / arr.length;
+    }, outerAccum);
+  }, 0) / 4;
+  return Math.round(result * 100) / 100;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,7 +168,19 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let result = weather.reduce((outerAccum, outerVal) => {
+
+    let weekAvg = outerVal.reduce((innerAccum, innerVal, idx, arr) => {
+      return innerAccum + innerVal / arr.length;
+    }, 0);
+
+    if (outerAccum === 0) {
+      return outerAccum += weekAvg;
+    }
+    return outerAccum > weekAvg ? weekAvg : outerAccum;
+  }, 0);
+
+  return Math.round(result * 100) / 100;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -175,7 +196,16 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  let result = [];
+  str.split('\n')
+    .map(el => el.split(','))
+    .forEach((el) => {
+      let inner = el.reduce((accum, val) => {
+        return parseInt(accum) + parseInt(val);
+      });
+      result.push(inner);
+    });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
