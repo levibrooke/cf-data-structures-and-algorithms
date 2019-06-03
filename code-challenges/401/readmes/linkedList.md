@@ -21,3 +21,7 @@ Implement a Singly Linked List Data Structure
 - Insert a value into head
 - Check if Linked List includes a value
 - Print the values of a Linked List
+
+## Solution
+- [Link to code](../challenges/src/main/java/challenges/LinkedList/LinkedList.java)
+- [Link to tests](../challenges/src/test/java/challenges/LinkedList/LinkedListTest.java)
