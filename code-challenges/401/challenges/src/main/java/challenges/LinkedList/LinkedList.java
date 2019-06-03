@@ -55,6 +55,8 @@ public class LinkedList {
     }
 
     public String print() {
+        // help from https://stackoverflow.com/a/19283312
+
         String result = "";
         Node current = this.head;
 
