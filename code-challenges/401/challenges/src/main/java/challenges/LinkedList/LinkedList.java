@@ -45,10 +45,11 @@ public class LinkedList {
         Node current = this.head;
 
         // while the node.next != null
-        while (current.next != null) {
+        while (current != null) {
             if (current.data == searchValue) {
                 return true;
             }
+            current = current.next;
         }
         return false;
     }
