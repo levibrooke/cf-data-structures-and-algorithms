@@ -53,4 +53,19 @@ public class LinkedList {
         }
         return false;
     }
+
+    public String print() {
+        String result = "";
+        Node current = this.head;
+
+        while(current != null){
+            result += current.data;
+
+            if(current.next != null){
+                result += " -> ";
+            }
+            current = current.next;
+        }
+        return "LinkedList: " + result;
+    }
 }
