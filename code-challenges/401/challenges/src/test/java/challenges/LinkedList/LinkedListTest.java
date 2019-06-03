@@ -32,6 +32,27 @@ public class LinkedListTest {
     @Test
     // head will point to first node
     public void testHeadPointer() {
-        
+        LinkedList newList = new LinkedList();
+
+        newList.insert(5);
+        newList.insert(3);
+        LinkedList.Node nodeVal = newList.head;
+
+        assertEquals("new list, node w/ value of 5",
+                3,
+                nodeVal.data);
+    }
+
+    @Test
+    // includes
+    public void testIncludes() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(3);
+        newList.insert(7);
+
+        assertEquals("is value in list?",
+                false,
+                newList.includes(8));
     }
 }

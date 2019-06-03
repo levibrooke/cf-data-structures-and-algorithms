@@ -39,4 +39,17 @@ public class LinkedList {
         }
         return this;
     }
+
+    public boolean includes(int searchValue) {
+
+        Node current = this.head;
+
+        // while the node.next != null
+        while (current.next != null) {
+            if (current.data == searchValue) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
