@@ -97,7 +97,7 @@ public class LinkedListTest {
         System.out.println(newList.print());
 
         assertEquals("test print",
-                "LinkedList: 7 -> 3 -> 5",
+                "LinkedList: 7 -> 3 -> 5 -> null",
                 newList.print());
     }
 }

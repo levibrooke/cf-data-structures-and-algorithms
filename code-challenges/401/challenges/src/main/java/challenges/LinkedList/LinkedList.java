@@ -68,6 +68,7 @@ public class LinkedList {
             }
             current = current.next;
         }
+        result += " -> null";
         return "LinkedList: " + result;
     }
 }
