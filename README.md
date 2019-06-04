@@ -8,7 +8,7 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 
 **Week 2**
 - [Lab 05: Singly Linked List](./code-challenges/401/readmes/linkedList.md)
-
+- [Code Challenge 06: Linked List Insertion](./code-challenges/401/readmes/linkedListInsertions.md)
 
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
