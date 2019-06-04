@@ -71,4 +71,29 @@ public class LinkedList {
         result += " -> null";
         return "LinkedList: " + result;
     }
+
+    public LinkedList append(int insertData) {
+        // create node & set next
+        Node newNode = new Node(insertData);
+        newNode.next = null;
+
+        // if empty list
+        if (this.head == null) {
+            this.head = newNode;
+        }
+
+        // if non-empty list
+        else {
+            Node current = this.head;
+            while (current != null) {
+
+                if (current.next == null) {
+                    current.next = newNode;
+                    return this;
+                }
+                current = current.next;
+            }
+        }
+        return this;
+    }
 }
