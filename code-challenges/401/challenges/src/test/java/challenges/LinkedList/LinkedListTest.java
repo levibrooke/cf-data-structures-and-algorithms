@@ -116,4 +116,20 @@ public class LinkedListTest {
 
         System.out.println(newList.print());
     }
+
+    @Test
+    public void insertBeforeTest() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(7);
+        newList.insert(9);
+
+        newList.insertBefore(7, 10);
+
+        assertEquals("test insertBefore",
+                "LinkedList: 9 -> 10 -> 7 -> 5 -> null",
+                newList.print());
+
+        System.out.println(newList.print());
+    }
 }

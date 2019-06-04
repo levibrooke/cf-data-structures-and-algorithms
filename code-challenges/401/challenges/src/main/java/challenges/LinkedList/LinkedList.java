@@ -96,4 +96,30 @@ public class LinkedList {
         }
         return this;
     }
+
+    public LinkedList insertBefore(int targetValue, int newVal) {
+        // if empty list
+        if (this.head == null) {
+            throw new IllegalStateException("cannot insertBefore on an empty list");
+        }
+
+        Node current = this.head;
+        while (current.next != null) {
+
+            Node next = current.next;
+
+            if (next.data == targetValue) {
+                // create node & set next
+                Node newNode = new Node(newVal);
+
+                current.next = newNode;
+                newNode.next = next;
+                return this;
+            }
+            current = current.next;
+        }
+        throw new IllegalArgumentException("targetValue was not contained in list");
+    }
+
+
 }
