@@ -121,5 +121,42 @@ public class LinkedList {
         throw new IllegalArgumentException("targetValue was not contained in list");
     }
 
+    // add insertAfter method
+
+    public int valueFromEnd(int k) {
+        // handle empty list
+        if (this.head == null) {
+            throw new IllegalStateException("Linked List is empty");
+        }
+
+        int length = 0;
+        Node previous = null;
+        Node next;
+        Node current = this.head;
+
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+            length++;
+        }
+
+        System.out.println(length);
+
+        System.out.println(this.print());
+
+        // handle k is larger than length of list
+        if (length < k) {
+            throw new IllegalArgumentException("Linked List is shorter than k");
+        }
+
+        int i = 0;
+        while (i < k) {
+            current = current.next;
+            i++;
+        }
+        return current.data;
+    }
 
 }
