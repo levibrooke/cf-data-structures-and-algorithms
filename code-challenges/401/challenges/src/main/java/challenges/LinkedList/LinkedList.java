@@ -71,4 +71,55 @@ public class LinkedList {
         result += " -> null";
         return "LinkedList: " + result;
     }
+
+    public LinkedList append(int insertData) {
+        // create node & set next
+        Node newNode = new Node(insertData);
+        newNode.next = null;
+
+        // if empty list
+        if (this.head == null) {
+            this.head = newNode;
+        }
+
+        // if non-empty list
+        else {
+            Node current = this.head;
+            while (current != null) {
+
+                if (current.next == null) {
+                    current.next = newNode;
+                    return this;
+                }
+                current = current.next;
+            }
+        }
+        return this;
+    }
+
+    public LinkedList insertBefore(int targetValue, int newVal) {
+        // if empty list
+        if (this.head == null) {
+            throw new IllegalStateException("cannot insertBefore on an empty list");
+        }
+
+        Node current = this.head;
+        while (current.next != null) {
+
+            Node next = current.next;
+
+            if (next.data == targetValue) {
+                // create node & set next
+                Node newNode = new Node(newVal);
+
+                current.next = newNode;
+                newNode.next = next;
+                return this;
+            }
+            current = current.next;
+        }
+        throw new IllegalArgumentException("targetValue was not contained in list");
+    }
+
+
 }
