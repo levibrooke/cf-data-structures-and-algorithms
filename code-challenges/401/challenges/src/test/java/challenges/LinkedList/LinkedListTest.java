@@ -154,9 +154,21 @@ public class LinkedListTest {
         newList.insert(7);
         newList.insert(9);
 
-        newList.valueFromEnd(3);
         assertEquals("k is same as length of list",
                 9,
                 newList.valueFromEnd(3));
+    }
+
+    // happy path
+    @Test
+    public void kFromEndListTest() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(7);
+        newList.insert(9);
+
+        assertEquals("happy path",
+                7,
+                newList.valueFromEnd(1));
     }
 }
