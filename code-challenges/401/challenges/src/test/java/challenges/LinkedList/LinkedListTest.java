@@ -132,4 +132,43 @@ public class LinkedListTest {
 
         System.out.println(newList.print());
     }
+
+    // return value k positions from end of ll
+
+    // test k is greater than length of ll
+    @Test(expected = IllegalArgumentException.class)
+    public void kLargerThanListTest() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(7);
+        newList.insert(9);
+
+        newList.valueFromEnd(4);
+    }
+
+    // test k and the length of the list are the same
+    @Test
+    public void kEqualLengthListTest() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(7);
+        newList.insert(9);
+
+        assertEquals("k is same as length of list",
+                9,
+                newList.valueFromEnd(3));
+    }
+
+    // happy path
+    @Test
+    public void kFromEndListTest() {
+        LinkedList newList = new LinkedList();
+        newList.insert(5);
+        newList.insert(7);
+        newList.insert(9);
+
+        assertEquals("happy path",
+                7,
+                newList.valueFromEnd(1));
+    }
 }
