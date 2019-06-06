@@ -159,4 +159,21 @@ public class LinkedList {
         return current.data;
     }
 
+    public static LinkedList mergeLists(LinkedList one, LinkedList two) {
+        Node oneCurrent = one.head;
+        Node twoCurrent = two.head;
+
+        while (oneCurrent != null && twoCurrent != null) {
+            Node oneNext = oneCurrent.next;
+            oneCurrent.next = twoCurrent;
+            oneCurrent = oneNext;
+
+            if (oneCurrent != null) {
+                Node twoNext = twoCurrent.next;
+                twoCurrent.next = oneCurrent;
+                twoCurrent = twoNext;
+            }
+        }
+        return one;
+    }
 }
