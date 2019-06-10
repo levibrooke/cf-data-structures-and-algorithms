@@ -19,7 +19,7 @@ public class Queue {
         }
 
         // if not empty
-        rear.next = node;
+        front.next = node;
         rear = node;
     }
 
