@@ -12,5 +12,8 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 - [Code Challenge 07: k-th value from the end of a linked list.](./code-challenges/401/readmes/linkedListKValFromEnd.md)
 - [Code Challenge 08: Merge two linked lists.](./code-challenges/401/readmes/mergeLinkedLists.md)
 
+**Week 3**
+- [Lab 10: Stacks and Queues](./code-challenges/401/readmes/stacksAndQueues.md)
+
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
