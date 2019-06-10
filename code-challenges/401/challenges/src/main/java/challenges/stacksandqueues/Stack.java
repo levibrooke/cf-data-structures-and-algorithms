@@ -15,9 +15,14 @@ public class Stack {
     public int pop() {
         Node current = top;
 
+        // if there are more than 1 nodes
         if (top.next != null) {
             top = top.next;
         }
+        else {
+            top = null;
+        }
+        current.next = null;
 
         return current.data;
     }
