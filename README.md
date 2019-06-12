@@ -14,6 +14,7 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 
 **Week 3**
 - [Lab 10: Stacks and Queues](./code-challenges/401/readmes/stacksAndQueues.md)
+- [Code Challenge 11: Implement a Queue using two Stacks](./code-challenges/401/readmes/queueWithStacks.md)
 
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
