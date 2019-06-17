@@ -17,25 +17,22 @@ public class BinaryTree<T extends Comparable> {
     // traversal methods go here
 
     public ArrayList preOrder() {
-        if (this.root == null) {
-            return null;
-        }
         ArrayList preOrderList = new ArrayList();
 
         this.preOrder(this.root, preOrderList);
-
 
         return preOrderList;
     }
 
     private void preOrder(BinaryTreeNode node, ArrayList preOrderList) {
-        // add root
-        preOrderList.add(this.root.value, preOrderList);
+        if (node == null) {
+            return;
+        }
+        
+        preOrderList.add(node.value);
 
-        // add left
-        preOrderList.add(this.root.left.value);
+        preOrder(node.left, preOrderList);
 
-        // add right
-        preOrderList.add(this.root.right.value);
+        preOrder(node.right, preOrderList);
     }
 }
