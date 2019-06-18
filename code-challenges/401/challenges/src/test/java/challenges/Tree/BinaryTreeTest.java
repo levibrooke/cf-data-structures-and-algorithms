@@ -17,6 +17,18 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void treeWithRoot() {
+        BinaryTree treeUnderTest = new BinaryTree("test");
+
+        String result = treeUnderTest.root.value.toString();
+
+        System.out.println(result);
+
+        assertEquals("test",
+                result);
+    }
+
+    @Test
     public void testPreOrder() {
         BinaryTree treeUnderTest = new BinaryTree(2);
         treeUnderTest.root.setLeft(new BinaryTreeNode(1));
