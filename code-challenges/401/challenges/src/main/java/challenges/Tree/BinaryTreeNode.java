@@ -9,4 +9,12 @@ public class BinaryTreeNode<T extends Comparable> {
     public BinaryTreeNode(T value) {
         this.value = value;
     }
+
+    public void setLeft(BinaryTreeNode<T> left) {
+        this.left = left;
+    }
+
+    public void setRight(BinaryTreeNode<T> right) {
+        this.right = right;
+    }
 }
