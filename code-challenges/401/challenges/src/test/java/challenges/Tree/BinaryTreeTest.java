@@ -31,4 +31,36 @@ public class BinaryTreeTest {
         assertEquals(expected,
                 treeUnderTest.preOrder());
     }
+
+    @Test
+    public void testInOrder() {
+        BinaryTree treeUnderTest = new BinaryTree(2);
+        treeUnderTest.root.setLeft(new BinaryTreeNode(1));
+        treeUnderTest.root.setRight(new BinaryTreeNode(5));
+        System.out.println(treeUnderTest.inOrder().toString());
+
+        ArrayList expected = new ArrayList();
+        expected.add(1);
+        expected.add(2);
+        expected.add(5);
+
+        assertEquals(expected,
+                treeUnderTest.inOrder());
+    }
+
+    @Test
+    public void testPostOrder() {
+        BinaryTree treeUnderTest = new BinaryTree(2);
+        treeUnderTest.root.setLeft(new BinaryTreeNode(1));
+        treeUnderTest.root.setRight(new BinaryTreeNode(5));
+        System.out.println(treeUnderTest.postOrder().toString());
+
+        ArrayList expected = new ArrayList();
+        expected.add(1);
+        expected.add(5);
+        expected.add(2);
+
+        assertEquals(expected,
+                treeUnderTest.postOrder());
+    }
 }
