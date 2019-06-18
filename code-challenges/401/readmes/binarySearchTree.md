@@ -11,7 +11,16 @@ Implement a Tree
 - Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
 - Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
-## Approach & Efficiency
-
-
 ## API
+- Binary Tree
+  - isEmpty
+  - preOrder traversal
+  - inOrder traversal
+  - postOrder traversal
+- Binary Search Tree
+  - add
+  - contains
+
+## Solution
+- [Link to code](../challenges/src/main/java/challenges/Tree)
+- [Link to tests](../challenges/src/test/java/challenges/Tree)
