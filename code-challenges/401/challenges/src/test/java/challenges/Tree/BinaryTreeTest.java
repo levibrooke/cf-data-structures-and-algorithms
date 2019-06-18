@@ -29,6 +29,46 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void addLeft() {
+        BinarySearchTree treeUnderTest = new BinarySearchTree();
+        treeUnderTest.add(5);
+        treeUnderTest.add(2);
+        treeUnderTest.add(7);
+
+        assertEquals(2, treeUnderTest.root.left.value);
+    }
+
+    @Test
+    public void addRight() {
+        BinarySearchTree treeUnderTest = new BinarySearchTree();
+        treeUnderTest.add(5);
+        treeUnderTest.add(2);
+        treeUnderTest.add(7);
+
+        assertEquals(7, treeUnderTest.root.right.value);
+    }
+
+    @Test
+    public void containsMethodFalse() {
+        BinarySearchTree treeUnderTest = new BinarySearchTree();
+        treeUnderTest.add(5);
+        treeUnderTest.add(2);
+        treeUnderTest.add(7);
+
+        assertEquals(false, treeUnderTest.contains(6));
+    }
+
+    @Test
+    public void containsMethodTrue() {
+        BinarySearchTree treeUnderTest = new BinarySearchTree();
+        treeUnderTest.add(5);
+        treeUnderTest.add(2);
+        treeUnderTest.add(7);
+
+        assertEquals(true, treeUnderTest.contains(2));
+    }
+
+    @Test
     public void testPreOrder() {
         BinaryTree treeUnderTest = new BinaryTree(2);
         treeUnderTest.root.setLeft(new BinaryTreeNode(1));
