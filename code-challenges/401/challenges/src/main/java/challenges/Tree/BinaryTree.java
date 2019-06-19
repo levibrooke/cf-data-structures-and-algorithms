@@ -1,6 +1,9 @@
 package challenges.Tree;
 
+
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T extends Comparable> {
     BinaryTreeNode<T> root;
@@ -71,5 +74,25 @@ public class BinaryTree<T extends Comparable> {
         postOrder(node.left, postOrderList); // move to left first
         postOrder(node.right, postOrderList); // then right
         postOrderList.add(node.value);
+    }
+
+    // breadth first search
+    public void breadthFirst(BinaryTree tree) {
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
+        BinaryTreeNode current = tree.root;
+        queue.add(current);
+
+        while (!queue.isEmpty()) {
+            current = queue.remove();
+            System.out.println(current.value);
+
+            if (current.left != null) {
+                queue.add(current.left);
+            }
+            if (current.right != null) {
+                queue.add(current.right);
+            }
+        }
+        return;
     }
 }
