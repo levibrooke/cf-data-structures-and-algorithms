@@ -18,6 +18,7 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 
 **Week 4**
 - [Lab 15: Trees](./code-challenges/401/readmes/binarySearchTree.md)
+- [Code Challenge 17: Breadth-first traversal](./code-challenges/401/readmes/breadthFirst.md)
 
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
