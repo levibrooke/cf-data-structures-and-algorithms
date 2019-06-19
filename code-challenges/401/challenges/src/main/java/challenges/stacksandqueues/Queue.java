@@ -34,4 +34,12 @@ public class Queue {
     public int peek() {
         return front.data;
     }
+
+    public Node getFront() {
+        return front;
+    }
+
+    public Node getRear() {
+        return rear;
+    }
 }

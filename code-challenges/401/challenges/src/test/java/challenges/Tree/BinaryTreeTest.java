@@ -115,4 +115,15 @@ public class BinaryTreeTest {
         assertEquals(expected,
                 treeUnderTest.postOrder());
     }
+
+    @Test
+    public void testBreadthFirstSearch() {
+        BinaryTree treeUnderTest = new BinaryTree(2);
+        treeUnderTest.root.setLeft(new BinaryTreeNode(1));
+        treeUnderTest.root.setRight(new BinaryTreeNode(5));
+
+        treeUnderTest.breadthFirst(treeUnderTest);
+
+        // visually check for println
+    }
 }
