@@ -95,4 +95,26 @@ public class BinaryTree<T extends Comparable> {
         }
         return;
     }
+
+    // find maximum value
+    public int findMaximumValue(BinaryTree tree) {
+        if (tree == null) {
+            throw new NullPointerException();
+        }
+
+        return findMaximumValue(tree.root);
+    }
+
+    public int findMaximumValue(BinaryTreeNode node) {
+        int max = (int) node.value;
+
+        if (node.left != null) {
+            max = Math.max(max, this.findMaximumValue(node.left));
+        }
+        if (node.right != null) {
+            max = Math.max(max, this.findMaximumValue(node.right));
+        }
+
+        return max;
+    }
 }

@@ -126,4 +126,26 @@ public class BinaryTreeTest {
 
         // visually check for println
     }
+
+    @Test
+    public void testMaximumValue() {
+        BinaryTree treeUnderTest = new BinaryTree(2);
+        treeUnderTest.root.setLeft(new BinaryTreeNode(1));
+        treeUnderTest.root.setRight(new BinaryTreeNode(5));
+        treeUnderTest.root.left.setLeft(new BinaryTreeNode(11));
+        treeUnderTest.root.left.setRight(new BinaryTreeNode(6));
+
+        treeUnderTest.breadthFirst(treeUnderTest);
+
+        int result = treeUnderTest.findMaximumValue(treeUnderTest);
+
+        assertEquals(11, result);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testEmptyMaxValue() {
+        BinaryTree treeUnderTest = new BinaryTree();
+
+        treeUnderTest.findMaximumValue(treeUnderTest);
+    }
 }
