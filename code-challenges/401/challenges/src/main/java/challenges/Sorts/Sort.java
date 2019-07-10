@@ -1,5 +1,7 @@
 package challenges.Sorts;
 
+import org.apache.commons.math3.exception.NullArgumentException;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -22,6 +24,10 @@ public class Sort {
     }
 
     public static int[] mergeSort(int[] inputArr) {
+        if (inputArr == null) {
+            throw new NullArgumentException();
+        }
+
         int length = inputArr.length;
 
         if (length > 1) {
