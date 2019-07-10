@@ -38,4 +38,25 @@ public class SortTest {
 
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void quickSort() {
+        int[] sortThis = {3, 1, 4, 11, 18};
+
+        int[] result = Sort.quickSort(sortThis, 0, sortThis.length - 1);
+
+        int[] expected = {1, 3, 4, 11, 18};
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test (expected = NullArgumentException.class)
+    public void quickSortNull() {
+
+        int[] result = Sort.quickSort(null, 0, 1);
+
+        int[] expected = {1, 3, 4, 11, 18};
+
+        assertArrayEquals(expected, result);
+    }
 }
