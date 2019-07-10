@@ -72,6 +72,10 @@ public class Sort {
     }
 
     public static int[] quickSort(int[] inputArr, int left, int right) {
+        if (inputArr == null) {
+            throw new NullArgumentException();
+        }
+
         if (left < right) {
             int position = partition(inputArr, left, right);
 
@@ -89,7 +93,7 @@ public class Sort {
         for (int i = left; i < right; i++) {
             if (inputArr[i] <= pivot) {
                 low++;
-                swap(inputArr, right, low + 1);
+                swap(inputArr, i, low);
             }
         }
 
