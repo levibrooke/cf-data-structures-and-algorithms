@@ -23,6 +23,11 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 
 **Week 6**
 - [Lab 26: Insertion Sort](./code-challenges/401/readmes/insertionSort.md)
+- [Lab 27: Merge Sort](./code-challenges/401/readmes/mergeSort.md)
+- [Lab 28: Quick Sort](./code-challenges/401/readmes/quickSort.md)
+
+**Week 7**
+- [Code Challenge 31: Repeated Word](./code-challenges/401/readmes/repeatedWord.md)
 
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
