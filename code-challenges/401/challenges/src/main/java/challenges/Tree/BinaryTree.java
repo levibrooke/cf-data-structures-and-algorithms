@@ -17,6 +17,10 @@ public class BinaryTree<T extends Comparable> {
         return this.root == null ? true : false;
     }
 
+    public BinaryTreeNode<T> getRoot() {
+        return root;
+    }
+
     // preOrder traversal
     public ArrayList preOrder() {
         ArrayList preOrderList = new ArrayList();
