@@ -2,11 +2,16 @@ package challenges.Tree.TreeIntersection;
 
 import challenges.Tree.BinaryTree;
 import challenges.Tree.BinaryTreeNode;
+import org.apache.commons.math3.exception.NullArgumentException;
 
 import java.util.HashSet;
 
 public class TreeIntersection {
     public static HashSet findIntersection(BinaryTree bTreeOne, BinaryTree bTreeTwo) {
+        if (bTreeOne == null || bTreeTwo == null) {
+            throw new NullArgumentException();
+        }
+
         HashSet one = new HashSet();
         HashSet result = new HashSet();
 
