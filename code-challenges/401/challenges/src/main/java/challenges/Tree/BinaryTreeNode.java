@@ -17,4 +17,16 @@ public class BinaryTreeNode<T extends Comparable> {
     public void setRight(BinaryTreeNode<T> right) {
         this.right = right;
     }
+
+    public T getValue() {
+        return value;
+    }
+
+    public BinaryTreeNode<T> getLeft() {
+        return left;
+    }
+
+    public BinaryTreeNode<T> getRight() {
+        return right;
+    }
 }
