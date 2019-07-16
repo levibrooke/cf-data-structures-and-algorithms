@@ -27,6 +27,7 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 - [Lab 28: Quick Sort](./code-challenges/401/readmes/quickSort.md)
 
 **Week 7**
+- [Lab: Hash Table Implementation](./code-challenges/401/readmes/hashtable.md)
 - [Code Challenge 31: Repeated Word](./code-challenges/401/readmes/repeatedWord.md)
 - [Code Challenge 32: Tree Intersection](./code-challenges/401/readmes/treeIntersection.md)
 
