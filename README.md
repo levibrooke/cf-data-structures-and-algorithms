@@ -30,5 +30,8 @@ This repo contains code challenges for Code Fellows 301 JavaScript and 401 Java.
 - [Code Challenge 31: Repeated Word](./code-challenges/401/readmes/repeatedWord.md)
 - [Code Challenge 32: Tree Intersection](./code-challenges/401/readmes/treeIntersection.md)
 
+**Week 8**
+- [Lab: Graph](./code-challenges/401/readmes/graph.md)
+
 ## 301 Challenges
 - [Inside this directory](./code-challenges/301)
