@@ -9,6 +9,7 @@ public class Stack {
 
     public void push(int value) {
         Node node = new Node(value);
+        node.next = top;
         top = node;
     }
 
